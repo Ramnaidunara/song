@@ -7,140 +7,148 @@
     <style>
         /* General body styling */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
             color: #333;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
+            min-height: 100vh;
         }
 
-        /* Music player container styling */
+        /* Music player container */
         .music-player {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            padding: 20px 30px;
-            max-width: 400px;
-            width: 90%;
-            overflow-y: auto;
-            height: 90vh;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
-        /* Heading styling */
-        .music-player h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #007bff;
+        /* Song card styling */
+        .song-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .song-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
 
         /* Song name styling */
         .song-name {
-            font-size: 18px;
-            margin: 10px 0;
+            font-size: 20px;
             font-weight: bold;
-            color: #555;
+            margin-bottom: 10px;
+            color: #007bff;
         }
 
         /* Audio player styling */
         audio {
             width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
-        /* Footer text */
+        /* Footer */
         .footer {
-            margin-top: 15px;
+            text-align: center;
+            margin-top: 30px;
             font-size: 14px;
-            color: #666;
+            color: #777;
         }
     </style>
 </head>
 <body>
     <div class="music-player">
-        <h1>Enjoy These Beautiful Songs</h1>
+        <div class="song-card">
+            <div class="song-name">Sri Annapurna Stothram</div>
+            <audio controls>
+                <source src="https://dl1.jattpendu.com/download/128k-tmqn/Sri-Annapurna-Stothram.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
-        <!-- Add Songs -->
-        <div class="song-name">Sri Annapurna Stothram</div>
-        <audio controls>
-            <source src="https://dl1.jattpendu.com/download/128k-tmqn/Sri-Annapurna-Stothram.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Vinaro Bhagyamu</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Vinaro%20Bhagyamu%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Telugu Padaniki</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Telugu%20Padaniki%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Padaharu Kalalaku</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Padaharu%20Kalalaku%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Ale Ale Maradala</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Ale%20Ale%20Maradala%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Kalaganti Kalaganti</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Kalaganti%20Kalaganti%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Adigo Alladigo</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Adigo%20Alladigo%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Podagantimayya Purusothama</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Podagantimayya%20Purusothama%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Vinnapalu Vinavale</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Vinnapalu%20Vinavale-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Shobaname Shobaname</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/%20Shobaname%20Shobaname%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="song-name">Musina Mutyalake</div>
-        <audio controls>
-            <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Musina%20Mutyalake%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        
-        <div class="footer">
-            <p>Relax and enjoy the music!</p>
+        <div class="song-card">
+            <div class="song-name">Vinaro Bhagyamu</div>
+            <audio controls>
+                <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Vinaro%20Bhagyamu%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="song-card">
+            <div class="song-name">Telugu Padaniki</div>
+            <audio controls>
+                <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Telugu%20Padaniki%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="song-card">
+            <div class="song-name">Padaharu Kalalaku</div>
+            <audio controls>
+                <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Padaharu%20Kalalaku%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="song-card">
+            <div class="song-name">Ale Ale Maradala</div>
+            <audio controls>
+                <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Ale%20Ale%20Maradala%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="song-card">
+            <div class="song-name">Kalaganti Kalaganti</div>
+            <audio controls>
+                <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Kalaganti%20Kalaganti%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="song-card">
+            <div class="song-name">Adigo Alladigo</div>
+            <audio controls>
+                <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Adigo%20Alladigo%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="song-card">
+            <div class="song-name">Podagantimayya Purusothama</div>
+            <audio controls>
+                <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Podagantimayya%20Purusothama%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="song-card">
+            <div class="song-name">Vinnapalu Vinavale</div>
+            <audio controls>
+                <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Vinnapalu%20Vinavale-%20SenSongsMp3.Co.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="song-card">
+            <div class="song-name">Musina Mutyalake</div>
+            <audio controls>
+                <source src="https://sencloud.online/mp3/Telugu%20Mp3/old/Nagarjuna/Annamayya%20-%20(1997)/Musina%20Mutyalake%20-%20SenSongsMp3.Co.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
         </div>
     </div>
 
-    <script>
-        // Get all audio elements on the page
-        const audios = document.querySelectorAll('audio');
-
-        audios.forEach(audio => {
-            audio.addEventListener('play', () => {
-                // Pause all other audio elements
-                audios.forEach(otherAudio => {
-                    if (otherAudio !== audio) {
-                        otherAudio.pause();
-                    }
-                });
-            });
-        });
-    </script>
+  
+   
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>God Songs & Old Hits </title>
+    <title>God Songs & Old Hits</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,48 +28,50 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
         }
-        .button-container {
+        .card-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
             margin-top: 20px;
         }
-        button {
-            padding: 15px 30px;
-            font-size: 1.1em;
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .card button {
+            padding: 10px 20px;
+            font-size: 1em;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            color: white;
         }
         .god-songs {
             background-color: #4CAF50;
-            color: white;
         }
         .god-songs:hover {
             background-color: #45a049;
         }
         .old-hits {
             background-color: #2196F3;
-            color: white;
         }
         .old-hits:hover {
             background-color: #1e88e5;
-        }
-        .favorites {
-            background-color: #FF9800;
-            color: white;
-        }
-        .favorites:hover {
-            background-color: #fb8c00;
-        }
-        .recent {
-            background-color: #E91E63;
-            color: white;
-        }
-        .recent:hover {
-            background-color: #d81b60;
         }
     </style>
 </head>
@@ -79,17 +81,16 @@
     </header>
     <main>
         <p>Welcome to your music interface! NARA KRISHNA VENI:</p>
-        <div class="button-container">
-            <button class="god-songs">God Songs</button>
-            <button class="old-hits" >Old Hits</button>
-            
+        <div class="card-container">
+            <div class="card">
+                <h3>God Songs</h3>
+                <button class="god-songs" onclick="location.href='devotional.html'">Explore</button>
+            </div>
+            <div class="card">
+                <h3>Old Hits</h3>
+                <button class="old-hits" onclick="location.href='oldhits.html'">Explore</button>
+            </div>
         </div>
     </main>
 </body>
 </html>
-<script>
-    document.querySelector('.god-songs').addEventListener('click', function () {
-        // Navigate to another page or scroll to another section
-        window.location.href = "devotional.html";
-    });
-</script>
