@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God Songs & Old Hits </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .god-songs {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .god-songs:hover {
+            background-color: #45a049;
+        }
+        .old-hits {
+            background-color: #2196F3;
+            color: white;
+        }
+        .old-hits:hover {
+            background-color: #1e88e5;
+        }
+        .favorites {
+            background-color: #FF9800;
+            color: white;
+        }
+        .favorites:hover {
+            background-color: #fb8c00;
+        }
+        .recent {
+            background-color: #E91E63;
+            color: white;
+        }
+        .recent:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        YOUR MUSIC IS HERE
+    </header>
+    <main>
+        <p>Welcome to your music interface! NARA KRISHNA VENI:</p>
+        <div class="button-container">
+            <button class="god-songs">God Songs</button>
+            <button class="old-hits" >Old Hits</button>
+            
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    document.querySelector('.god-songs').addEventListener('click', function () {
+        // Navigate to another page or scroll to another section
+        window.location.href = "devotional.html";
+    });
+</script>
